@@ -1,0 +1,42 @@
+{
+  "name": "aurelia-recipe",
+  "version": "1.0.0",
+  "description": "This is the master repository for the Aurelia Workshop using Visual Studio 2015",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tibor19/aurelia-recipe-vs2015.git"
+  },
+  "keywords": [
+    "Aurelia",
+    "Recipe",
+    "Workshop",
+    "VS2015"
+  ],
+  "author": "Tiberiu Covaci",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tibor19/aurelia-recipe-vs2015/issues"
+  },
+  "homepage": "https://github.com/tibor19/aurelia-recipe-vs2015#readme",
+  "devDependencies": {
+    "jspm": "^0.16.11"
+  },
+  "jspm": {
+    "directories": {
+      "baseURL": "wwwroot"
+    },
+    "dependencies": {
+      "aurelia-bootstrapper": "github:aurelia/bootstrapper@^0.17.0",
+      "aurelia-framework": "github:aurelia/framework@^0.16.0"
+    },
+    "devDependencies": {
+      "babel": "npm:babel-core@^5.8.24",
+      "babel-runtime": "npm:babel-runtime@^5.8.24",
+      "core-js": "npm:core-js@^1.1.4"
+    }
+  }
+}
