@@ -1,6 +1,6 @@
 ﻿export class App{
     constructor(){
-        this.title = "First Aurelia App";
-        this.message = "Hello World";
+        this.title = "The spaghetti code files";
+        this.message = "Random recipes";
     }
 }
