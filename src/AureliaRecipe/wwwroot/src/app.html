@@ -1,6 +1,6 @@
 ﻿<template>
-    <require from="navbar.html" as="nav-bar"></require>
-    <require from="footerbar.html" as="footer-bar"></require>
+    <require from="nav-bar.html"></require>
+    <require from="footer-bar"></require>
     <div class="container">
 
         <header>
@@ -8,12 +8,13 @@
 
             <h3>${message}</h3>
         </header>
-        <nav-bar></nav-bar>
 
-        <compose view="home.html"></compose>
+        <nav-bar router.bind="router" ></nav-bar>
+
+        <router-view></router-view>
 
         <footer>
-            <footer-bar></footer-bar>
+            <footer-bar router.bind="router"></footer-bar>
         </footer>
     </div>
 
