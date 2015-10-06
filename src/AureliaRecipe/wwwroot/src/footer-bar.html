@@ -1,0 +1,8 @@
+﻿<template>
+    <template repeat.for="row of router.navigation">
+        <a href.bind="row.href">${row.title}</a>
+        <template if.bind="!$last">
+            |
+        </template>
+    </template>
+</template>
