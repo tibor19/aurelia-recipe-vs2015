@@ -11,7 +11,7 @@ export class Recipe {
     }
 
     activate(){
-        this.http
+        return this.http
             .get('/data/recipe.json')
             .then(result => {
                 return this.recipe = result.content;
