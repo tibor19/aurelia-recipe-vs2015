@@ -39,7 +39,6 @@
         },
         "amount": null,
         "amountType": null
-    }, {
     }],
     "recipeInstructions": [{
         "recipeInstructionID": 1,
