@@ -12,7 +12,7 @@
             {route : ['', 'home'],  moduleId : 'home',        nav : true, title: 'Home'},
             {route : 'weekly-menu', moduleId : 'weekly-menu', nav : true, title: 'Weekly Menu' },
             {route : 'recipe',      moduleId : 'recipe',      nav : true, title: 'I Feel Lucky' },
-            {route : 'recipe/:id',  moduleId : 'recipe'}
+            {route : 'recipe/:id', name: 'recipe', moduleId : 'recipe'}
         ]);
 
         this.router = router;
