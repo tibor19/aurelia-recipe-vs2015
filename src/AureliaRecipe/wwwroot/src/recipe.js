@@ -1,21 +1,17 @@
 ﻿import {inject} from 'aurelia-framework';
-import {HttpClient} from 'aurelia-http-client';
+import {RecipeService} from 'services/recipe-service';
 
-@inject(HttpClient)
+@inject(RecipeService)
 export class Recipe {
     
     recipe = null;
 
-    constructor(http){
-        this.http = http;
+    constructor(recipeService){
+        this.recipeService = recipeService;
     }
 
-    activate(){
-        return this.http
-            .get('/data/recipe.json')
-            .then(result => {
-                return this.recipe = result.content;
-            })
-            .catch(console.log);
+    activate(params){
+        let id = params.id || '1';
+        return this.recipeService.getRecipe(id).then(r => (this.recipe = r));
     }
 }
