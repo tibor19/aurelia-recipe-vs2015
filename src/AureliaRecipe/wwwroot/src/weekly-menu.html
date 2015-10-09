@@ -1,5 +1,4 @@
 ﻿<template>
-    <require from="services/converters"></require>
     <article>
         <h2>Weekly Menu</h2>
 
@@ -7,7 +6,6 @@
             <a route-href="route: recipe; params.bind: {id: recipe.recipeID}">
                 <div class="box-content"
                      css="float:${ $odd ? 'left' : 'right'}">
-
                     <h2>${recipe.weekday}</h2>
                     <h5>${$index | weekDay}</h5>
                     <h4>${recipe.name}</h4>

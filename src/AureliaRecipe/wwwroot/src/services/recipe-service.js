@@ -28,4 +28,11 @@ export class RecipeService{
                     return result.content;
                 }).catch(error => console.log(error));
     }
+
+    saveRecipe(recipe){
+        let url = join(this.url, '' + recipe.recipeID);
+
+        return this.http.put(url, recipe);
+
+    }
 }

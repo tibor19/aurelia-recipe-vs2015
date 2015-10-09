@@ -1,8 +1,17 @@
 ﻿<template>
     <article>
         <div>
-            <h2>${recipe.name}</h2>
-
+            <h2>
+                <template if.bind="!isEditMode">
+                    ${recipe.name}
+                    <button click.trigger="edit()">Edit</button>
+                </template>
+                <template if.bind="isEditMode">
+                    <input type="text" value.bind="recipeName" />
+                    <button click.trigger="save()">Save</button>
+                    <button click.trigger="cancel()">Cancel</button>
+                </template>
+            </h2>
             <div class="box">
                 <div class="box-content float-right">
                     <table>
@@ -17,7 +26,7 @@
                     </table>
                 </div>
                 <div class="box-image float-left">
-                    <img class="recipe-image" src="/content/images/food/${recipe.image}.jpg" />
+                    <img class="recipe-image" src.bind="recipe.image | imagePath" />
                 </div>
             </div>
             <h3>Ingredients</h3>
