@@ -23,7 +23,7 @@ export class RecipeService{
     }
 
     getRecipies (){
-        return this.http.get(url)
+        return this.http.get(this.url)
                 .then(result => {
                     return result.content;
                 }).catch(error => console.log(error));
